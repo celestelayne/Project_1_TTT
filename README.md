@@ -12,6 +12,8 @@
 ***
 ### Existing Features
 + Classic three in a row game
++ Score tally
++ Reset button starts a new game
 
 ***
 ### Planned Features
