@@ -1,17 +1,33 @@
 // OOP Tic Tac Toe boilerplate code
+$(function() {
 
-// Execute this code only AFTER the document is ready
-// Hint: use jQuery's `$(document).ready`
+var board = {
+  0: "",
+  1: "",
+  2: "",
+  3: "",
+  4: "",
+  5: "",
+  6: "",
+  7: "",
+  8: ""
+}
 
-  function Game() {
-    //Create a new instance of player 1
-    //this.player1 = ...
+var winners = [
+  [0,1,2], [3,4,5], [5,6,7],
+  [0,3,6], [1,4,7], [2,5,8],
+  [0,4,8], [2,4,6]
+];
 
-    //Do the same for a player 2
-    //this.player2 = ...
-    
-    //Create the board
-    //this.board = ...
+
+  function Game(squares) {
+    this.board = new Board(squares);
+    this.players = [];
+    this.players[0] = new Player('Player 1', 'X'); // instances of players in the game
+    this.players[1] = new Player('Player 2', 'O'); // instances of players in the game
+    this.switchPlayers = function() {
+
+    }
   }
 
   // Remember: prototypes are shared functions between all game instances
@@ -24,20 +40,43 @@
     //
   };
 
-  // A starter Player constructor.
-  function Player(team) {
-    //Is the player X or O?
-    //this.team = ...
+  // Player constructor
+  function Player(player, symbol) {
+    this.player = player;
+    this.symbol = symbol;
+  }
+
+  // Board constructor has empty squares
+  function Board(size) {
+    this.size = size;
+    this.grid = [];
+    this.filledSquares = 0;
+  }
+
+ // Square constructor is empty with no Xs or Os
+  function Square() {
+    this.symbol = "";
+    this.isOccupied = false;
+  }
+
+  // Square sets the symbol X or O
+  Square.prototype.setSymbol = function(value) {
+    if(value !== 'X' || value !== 'O'){
+      return 'Please enter X or O';
+    } else if (this.isOccupied == true){
+      return 'This square is already filled, choose another';
+    } else {
+      this.symbol = value;
+    }
   };
 
-  // A starter Board constructor.
-  function Board() {
-    //Tracks the cells of the board instance
-    //this.$cells = ...
-
-    //Store any other properties that board may have below, such as a reset option
+  // Square gets the symbol X or O 
+  Square.prototype.getSymbol = function(value) {
+    return this.symbol;
   };
 
   // Start the game!
   var game = new Game();
   game.init();
+
+});

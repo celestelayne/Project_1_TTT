@@ -1,1 +1,42 @@
 /* Style Sheet */
+
+header {
+	height: 200px;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.player{
+
+}
+
+button{
+	width: 100px;
+	height: 40px;
+	background-color: rgb(107, 185, 240);
+  	color: rgb(242, 242, 242);
+	border: none;
+}
+
+section#board {
+	width: 1000px;
+	margin: auto;
+}
+
+.square{
+	width: 150px;
+	height: 150px;
+	background-color: rgb(236,236,236);
+	font-family: font-family: 'Montserrat', sans-serif;
+	font-size: 60px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+footer{
+	height: 100px;
+	background-color: black;
+}

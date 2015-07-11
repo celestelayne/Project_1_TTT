@@ -5,15 +5,83 @@
   <meta charset="utf-8" />
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Require jQuery -->  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+ 
+  <!-- CSS Stylesheet -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="main.css">
-  <!-- Require jQuery -->
-  <script type="text/javascript" src="app.js"></script>
+
+  <script type="text/javascript" src="new-app.js"></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
 </head>
 <body>
-  <!-- HTML Body -->
-  <h1>Tic Tac Toe</h1>
-  <img src="http://www.cs.utah.edu/~gk/atwork/img/hevequip2.gif" alt="under construction"></img>
-  <!-- Tic Tac Toe Board here -->
-  <!-- Reset button -->
+  <div id="container">
+  <!-- Header -->
+  <header>
+    <h1>TIC TAC TOE</h1>
+
+      <div class='player'>
+        <p id='player_X'>Player X </p>
+        <p id='player_O'>Player O </p>
+      </div>
+
+      <div class='reset'>
+        <button>Reset</button>
+      </div>
+
+    </header>
+  <!-- Main Body of the Game -->
+    <section id="board" style="text-align: center;">
+
+        <div class='square' id="square-0">
+          <p class='blank'></p>
+        </div>
+        <div class='square' id="square-1">
+          <p class='blank'></p>
+        </div>
+        <div class='square' id="square-2">
+          <p class='blank'></p>
+        </div>
+        <br>
+        <div class='square' id="square-3">
+          <p class='blank'></p>
+        </div>
+        <div class='square' id="square-4">
+          <p class='blank'></p>
+        </div>
+        <div class='square' id="square-5">
+          <p class='blank'></p>
+        </div>
+        <br>
+        <div class='square' id="square-6">
+          <p class='blank'></p>
+        </div>
+        <div class='square' id="square-7">
+          <p class='blank'></p>
+        </div>
+        <div class='square' id="square-8">
+          <p class='blank'></p>
+        </div>
+    </section>
+  <!-- Footer -->
+    <footer>
+        
+    </footer>
+
+  </div>
 </body>
 </html>
